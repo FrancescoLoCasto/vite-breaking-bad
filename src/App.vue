@@ -15,5 +15,5 @@ import AppHeader from './components/AppHeader.vue'
 </template>
 
 <style lang="scss" scoped>
-@import 'bootstrap/scss/bootstrap.scss';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
 </style>

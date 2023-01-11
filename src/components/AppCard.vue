@@ -21,7 +21,7 @@ export default {
 
 
 <template lang="">
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 100%;">
   <img :src="cardElement.card_images[0].image_url" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">{{ cardElement.name }}</h5>
@@ -32,5 +32,9 @@ export default {
 
 
 <style lang="scss">
-   
+   .card{
+      img{
+         height: 15rem;
+      }
+   }
 </style>
