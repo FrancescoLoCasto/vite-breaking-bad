@@ -14,15 +14,29 @@ export default {
 
    methods: {
       getCard(){
-         
+         axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0',{
+                  params: {
+                  }
+               })
+               .then((response) => {
+                  this.test = response.data.data;
+                  console.log(this.test)
+               })
+               .catch(function (error) {
+                  console.log(error)
+               })
       }
+   },
+
+   created() {
+      this.getCard();
    }
 }
 
 </script>
 
 <template lang="">
-<div class="wrapper-bg">
+<div class="wrapper-bg container">
    <div class="card-container">
       <h1>card</h1>
    </div>
