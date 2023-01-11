@@ -1,11 +1,14 @@
 
 <script>
-
+import AppCard from './AppCard.vue'
 import { store } from '../store.js'
 import axios from "axios";
 
 export default {
-   name: 'AppMain',
+   components:{
+      AppCard
+   }, 
+
    data () {
       return{
          store,
@@ -19,8 +22,8 @@ export default {
                   }
                })
                .then((response) => {
-                  this.test = response.data.data;
-                  console.log(this.test)
+                  this.store.listCard = response.data.data;
+                  console.log(this.store.listCard)
                })
                .catch(function (error) {
                   console.log(error)
@@ -36,16 +39,18 @@ export default {
 </script>
 
 <template lang="">
-<div class="wrapper-bg container">
+<div class="container-bg">
    <div class="card-container">
-      <h1>card</h1>
+      <div class="box-card">
+         <AppCard  v-for="card in store.listCard" :cardElement="card" />/>  
+      </div>
    </div>
 </div>
 </template>
 
 
 <style lang="scss" scoped>
-   .wrapper-bg{
+   .container-bg{
       width: 100%;
       height: 100vh;
       background-color: #a6b5a3;
@@ -55,6 +60,11 @@ export default {
          width: 150vh;
          height: 90vh;
          background-color: white;
+
+         .box-card{
+
+
+         }
       }
    }
 </style>
