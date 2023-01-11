@@ -41,8 +41,8 @@ export default {
 <template lang="">
 <div class="container-bg">
    <div class="card-container">
-      <div class="box-card d-flex">
-         <AppCard  v-for="card in store.listCard" :cardElement="card" />/>  
+      <div class="box-card">
+         <AppCard  v-for="card in store.listCard" :cardElement="card" />
       </div>
    </div>
 </div>
@@ -51,16 +51,18 @@ export default {
 
 <style lang="scss" scoped>
    .container-bg{
+      padding: 2rem;
       background-color: #a6b5a3;
       display: flex;
 
       .card-container{
-         margin: 0 auto;
-         background-color: white;
+
 
          .box-card{
-
-
+            width: calc(100% / 5);
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
          }
       }
    }
