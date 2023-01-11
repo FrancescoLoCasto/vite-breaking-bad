@@ -1,8 +1,24 @@
 
 <script>
+
+import { store } from '../store.js'
+import axios from "axios";
+
 export default {
-   
+   name: 'AppMain',
+   data () {
+      return{
+         store,
+      }
+   },
+
+   methods: {
+      getCard(){
+         
+      }
+   }
 }
+
 </script>
 
 <template lang="">
