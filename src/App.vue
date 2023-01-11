@@ -4,13 +4,15 @@ import AppHeader from './components/AppHeader.vue'
 </script>
 
 <template>
+   
+   <AppHeader/>
 
-<AppMain/>
+   
+   <AppMain/>  
 
-<AppHeader/>
 
 </template>
 
 <style scoped>
-@use 
+
 </style>
