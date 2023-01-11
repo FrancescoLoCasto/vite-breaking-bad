@@ -35,9 +35,11 @@ export default {
 <style lang="scss">
 
 
-   .card{
+      .card{
       img{
-         height: 15rem;
+         height: 25rem;
       }
    }
+
+
 </style>
