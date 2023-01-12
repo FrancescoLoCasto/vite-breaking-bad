@@ -1,19 +1,31 @@
 
 <script>
 import { store } from '../store'
+import AppSelectCard from "./AppSelectCard.vue";
+import axios from "axios"
+
 export default {
    props: {
-      
       cardElement: {
       type : Object,
       required : true
       }
    },
 
+   name: 'AppCard',
+
+   components: {
+      AppSelectCard,
+   },
+
    data(){
       return{
          store,
       }
+   },
+
+   methods: {
+
    }
    
 }
