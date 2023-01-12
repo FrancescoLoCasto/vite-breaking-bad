@@ -36,6 +36,7 @@ export default {
 
 
       .card{
+         height: 10rem;
       img{
          height: 25rem;
       }
