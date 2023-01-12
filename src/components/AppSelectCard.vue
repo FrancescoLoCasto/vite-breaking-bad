@@ -18,7 +18,7 @@ export default {
 <template lang="">
 
    <label for="typeCard">Choose an archetype of card:</label>
-   <select name="typeCard" id="typeCard" v-model="store.selectArchetype" @change="$emit('getCard')">
+   <select name="typeCard" id="typeCard" v-model="store.selecType" @change="$emit('getCardsType')">
       <option value="Alien">Alien</option>
       <option value="Laval">Laval</option>
       <option value="Vylon">Vylon</option>

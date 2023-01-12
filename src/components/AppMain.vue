@@ -2,11 +2,13 @@
 <script>
 import AppCard from './AppCard.vue'
 import { store } from '../store.js'
+import AppSelectCard from "./AppSelectCard.vue";
 import axios from "axios";
 
 export default {
    components:{
-      AppCard
+      AppCard,
+      AppSelectCard
    }, 
 
    data () {
@@ -39,6 +41,11 @@ export default {
 </script>
 
 <template lang="">
+
+<div class="select-container">
+      <AppSelectCard @getCardsType="getCardsType(store.selecType)"/>
+</div>
+
 <div class="container-bg">
       <div class="box-card">
          <div class="card">

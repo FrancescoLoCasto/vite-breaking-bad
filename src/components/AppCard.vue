@@ -52,8 +52,8 @@ export default {
 
 <template lang="">
 
-   <div class="secet-container">
-      <AppSelectCard @getCardsType="getCardsType(store.selecType)" />
+   <div class="select-container">
+      <AppSelectCard @getCardsType="getCardsType(store.selecType)"/>
    </div>
 
       <div class="card" style="width: 100%;">
