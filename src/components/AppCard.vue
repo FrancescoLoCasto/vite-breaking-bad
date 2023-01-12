@@ -25,7 +25,25 @@ export default {
    },
 
    methods: {
+      getCardsType(typeCard){
+            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
+         params: {
+            archetype: typeCard,
+            num: 10,
+            offset: 0,
+         }
+         })
+         .then((response) => {
+            this.store.cardList = response.data.data
+         })
+         .catch(function (error) {
+            console.log(error)
+         })
+      }
+   },
 
+   create() {
+      this.getCardsType(store.selecType);
    }
    
 }
@@ -33,6 +51,11 @@ export default {
 
 
 <template lang="">
+
+   <div class="secet-container">
+      <AppSelectCard @getCardsType="getCardsType(store.selecType)" />
+   </div>
+
       <div class="card" style="width: 100%;">
         <img :src="cardElement.card_images[0].image_url" class="card-img-top" alt="...">
         <div class="card-body">
